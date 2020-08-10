@@ -7,7 +7,7 @@ body {
 }
 
 .wrapper {
-    width: 940px;
+    max-width: 940px;
     margin: auto;
     padding-left: 10px;
     padding-right: 10px;
@@ -141,7 +141,6 @@ body {
 
 .main-form input[type="submit"] {
     font: 300 18px 'Roboto', sans-serif;
-    font-size: 18;
     font-weight: 300;
     background-color: #eeeeee;
     border: 2px solid #000000;
@@ -165,10 +164,6 @@ body {
     display: flex;
 }
 
-.footer-block-logo {
-    width: 140px;
-}
-
 .footer-block-logo img {
     width: 100px;
     margin-top: 20px;
@@ -176,6 +171,7 @@ body {
 
 .footer-block-info {
     margin-top: 40px;
+    margin-left: 40px;
 }
 
 .footer-block-info a {
@@ -191,4 +187,47 @@ body {
 .footer-block-info-copuright {
     margin-top: 20px;
     font-size: 12px;
+}
+
+@media screen and (max-width: 576px) {
+    .main-form {
+        width: 100%;
+    }
+
+    .main-form input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .main-form textarea {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .header {
+        height: 340px;
+        background-position-y: 110px;
+    }
+
+    .header-block {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .header-block-info-contacts {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer-block {
+        align-items: center;
+        padding-bottom: 35px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main-form input[type="submit"] {
+        width: 100%;
+    }
 }
